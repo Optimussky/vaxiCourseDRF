@@ -1,0 +1,24 @@
+## Configuraciones en Backend
+
+
+## Configuracion de entornovirtual
+
+	pipenv shell
+
+## Configuraci�n Repositorio en Github
+	git init
+
+# ir a github y crear un repositoio con el nombre de nuestra carpeta
+#	clonarlo y ejecutarlo en terminal
+
+	git clone https://github.com/Optimussky/vaxiCourseDRF
+
+# hacer el procedimiento de inicializacion y en su defecto borrado de cache
+
+
+## Extensiones en VS Code
+	Python Extension Pack
+	Tabnine
+
+	
+
