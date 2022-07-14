@@ -1,0 +1,61 @@
+## Creación de una App
+
+    python manage.py startapp inmuebleslist_app
+
+## Ingresando al Django admin y creando superuser
+    #Configurar el archvo settings.py
+
+    INSTALLED_APPS = [
+
+        'inmuebleslist_app',
+    ]
+
+
+## Realizar migraciones
+
+    python manage.py migrate
+
+## creando superuser
+    python manage.py createsuperuser
+
+## Levantar de nuevo el servidor
+
+    python manage.py runserver 
+
+## Creación de modelo y tabla en Django admin ##
+    # Dentro del directorio inmuebleslist_app creamos el archivo urls.py
+    # Dentro de models creamos nuestros modelos
+
+
+
+from statistics import mode
+from django.db import models
+from django.forms import CharField
+
+# Create your models here.
+
+
+class Inmueble(models.Model):
+    direccion = models.CharField(max_length=250)
+    pais = models.CharField(max_length=150)
+    descripcion = models.CharField(max_length=500)
+    imagen = models.CharField(max_length=900)
+    active = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.direccion
+
+## Registar el modelo dentro del archivo admin.py ##
+
+from django.contrib import admin
+from inmuebleslist_app.models import Inmueble
+# Register your models here.
+admin.site.register(Inmueble)
+
+## Para ver los cambios es necesario Realizar migrations
+    # Dentro del directorio donde se encuetra "manage.py"
+    python manage.py makemigrations
+    python manage.py migrate
+
+## Creacion de endpoint consulta de datos ##
+

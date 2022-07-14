@@ -1,9 +1,10 @@
 ## Configuraciones en Backend
 
 
-## Configuracion de entornovirtual
+## Configuracion de entorno virtual
 
-	pipenv shell
+	pipenv shell (Crear entrono)
+	exit() (Salir del entorno virtual)
 
 ## Configuraci�n Repositorio en Github
 	git init
@@ -20,5 +21,13 @@
 	Python Extension Pack
 	Tabnine
 
+
+## Instalar Django en mi entorno virtual
+
+	pip install Django o pip install Django == 3.2.8
 	
 
+## Creación del Proyecto Django
+	# Dentro del entorno virtual creamos el Proyecto
+
+	django-admin startproject inmuebles
